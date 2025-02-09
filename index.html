@@ -22,7 +22,7 @@
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      width: 600px;
+      width: 500px;
       text-align: center;
     }
 
@@ -38,7 +38,7 @@
     }
 
     input[type="text"], select {
-      width: 40%;
+      width: 100%;
       padding: 10px;
       margin: 5px 0;
       border: 1px solid #ccc;
@@ -62,7 +62,7 @@
 
     #pdfPreview {
       width: 100%;
-      height: 400px;
+      height: 600px;
       border: 1px solid #ccc;
       margin-top: 30px;
       display: none;
@@ -154,22 +154,22 @@
       pdfPreview.style.display = 'block'; // Show the preview
 
       // You can also add the code to send the data to the server for backend processing (like saving it to DynamoDB) here.
-      fetch("/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      })
-      .then(response => response.json())
-      .then(responseData => {
-        alert(responseData.message);  // Success message from the server
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("An error occurred while submitting the form.");
-      });
-    });
+    //   fetch("/submit", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json"
+    //     },
+    //     body: JSON.stringify(data)
+    //   })
+    //   .then(response => response.json())
+    //   .then(responseData => {
+    //     alert(responseData.message);  // Success message from the server
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //     alert("An error occurred while submitting the form.");
+    //   });
+    // });
   </script>
 
 </body>
